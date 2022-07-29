@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript Arrays</h1>
+       
+    <p id="demo"></p>
+    <body>
+        <script>
+            let sum = 0;
+let text=""
+const arr=[1, 2, 3, 4, 5, 6];
+    
+    arr.push(5);    //push() adds new items to the end of an array//
+
+      alert(arr);   //1,2,3,4,5,6,5//
+
+    arr.splice(1, 1); // from index 1 remove 1 element
+
+        alert(arr);   //1,3,4,5,6,5//
+
+        arr.splice(0, 3, 7, 8);   //7,8,5,6,5//
+        alert(arr)
+
+        // remove 2 first elements
+        let removed = arr.splice(0, 2);
+
+        alert(removed);  //7,8//
+
+        alert(arr.slice(1, 3)); //6,5//
+
+        alert(arr.slice(-2));  //6,5 from 7,8,5,6,5//
+
+
+
+        // create an array from: arr and [3,4] and [5,6]
+        alert(arr.concat([0, 0], [1, 1])); // 5,6,5,0,0,1,1//
+    
+    arr.sort();
+    alert(arr); //5,5,6//
+
+
+
+    arr.reverse();
+        alert(arr);  //6,5,5//
+
+
+        alert(Array.isArray({})); // false
+
+            alert(Array.isArray([]));  // true
+
+            arr.pop();  //pop() removes the last element of an array//
+                alert(arr);    //6,5 from 6,5,5//
+
+
+ 
+
+
+                    alert(arr.reduce(myFunc));
+
+                        function myFunc(total, num) {
+                            return total - num;          //1//
+                        }
+
+                        arr.forEach(myFunction);
+                        alert(sum);
+                        function myFunction(item) {
+                                sum += item;    //11//
+                            }
+
+
+ 
+</script>
+</body>
+</html>
